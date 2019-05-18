@@ -1,0 +1,33 @@
+{
+  "name": "nicohaase/twig-isbn-formatter",
+  "type": "library",
+  "description": "ISBN formatting extension for Twig",
+  "keywords": [
+    "isbn",
+    "symfony",
+    "bundle",
+    "twig",
+    "twig extension"
+  ],
+  "homepage": "https://github.com/NicoHaase/twig-isbn-formatter",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nico Haase",
+      "homepage": "https://www.nicohaase.de"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "nicebooks/isbn": "^0.2",
+    "twig/twig": "^1.27|^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5|^8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "NicoHaase\\TwigIsbnFormatter\\": "src/"
+    }
+  }
+}
