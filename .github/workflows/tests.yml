@@ -1,8 +1,12 @@
 name: "Tests"
 
 on:
-    pull_request:
-    push:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 env:
     fail-fast: true
@@ -24,6 +28,36 @@ jobs:
                     - "1.x"
                     - "2.x"
                     - "3.x"
+                nicebooks-version:
+                    - "0.2.x"
+                include:
+                  - php-version: "7.4"
+                    twig-version: "1.x"
+                    nicebooks-version: "0.3.x"
+                  - php-version: "7.4"
+                    twig-version: "2.x"
+                    nicebooks-version: "0.3.x"
+                  - php-version: "7.4"
+                    twig-version: "3.x"
+                    nicebooks-version: "0.3.x"
+                  - php-version: "8.0"
+                    twig-version: "1.x"
+                    nicebooks-version: "0.3.x"
+                  - php-version: "8.0"
+                    twig-version: "2.x"
+                    nicebooks-version: "0.3.x"
+                  - php-version: "8.0"
+                    twig-version: "3.x"
+                    nicebooks-version: "0.3.x"
+                  - php-version: "8.1"
+                    twig-version: "1.x"
+                    nicebooks-version: "0.3.x"
+                  - php-version: "8.1"
+                    twig-version: "2.x"
+                    nicebooks-version: "0.3.x"
+                  - php-version: "8.1"
+                    twig-version: "3.x"
+                    nicebooks-version: "0.3.x"
 
         steps:
             - name: "Checkout"
@@ -52,7 +86,7 @@ jobs:
             - name: Install Composer dependencies
               run: |
                   composer config minimum-stability dev
-                  composer require --dev --no-update twig/twig:${{ matrix.twig-version }}
+                  composer require --dev --no-update twig/twig:${{ matrix.twig-version }} nicebooks/isbn:${{ matrix.nicebooks-version }}
                   composer install --no-progress --prefer-dist --optimize-autoloader
 
             - name: Run Tests

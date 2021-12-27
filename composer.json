@@ -19,7 +19,7 @@
   ],
   "require": {
     "php": "^7.2|^8.0",
-    "nicebooks/isbn": "^0.2",
+    "nicebooks/isbn": "^0.2|^0.3",
     "twig/twig": "^1.38|^2.0|^3.0"
   },
   "require-dev": {
