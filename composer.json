@@ -18,7 +18,7 @@
     }
   ],
   "require": {
-    "php": "^7.2",
+    "php": "^7.2|^8.0",
     "nicebooks/isbn": "^0.2",
     "twig/twig": "^1.38|^2.0|^3.0"
   },
@@ -28,6 +28,11 @@
   "autoload": {
     "psr-4": {
       "NicoHaase\\TwigIsbnFormatter\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "NicoHaase\\TwigIsbnFormatter\\Tests\\": "test/"
     }
   }
 }

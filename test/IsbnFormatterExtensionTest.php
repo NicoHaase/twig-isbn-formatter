@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace NicoHaase\TwigIsbnFormatter\Tests;
+
 use NicoHaase\TwigIsbnFormatter\IsbnFormatterExtension;
 use PHPUnit\Framework\TestCase;
 
