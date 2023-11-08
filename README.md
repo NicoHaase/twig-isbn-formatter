@@ -4,7 +4,7 @@ Based on `nicebooks/isbn`, this tiny package provides two Twig filters such that
 
 ## Installation
 
-Just run `composer install nicohaase/twig-isbn-formatter`
+Just run `composer require nicohaase/twig-isbn-formatter`
 
 ## Available filters
 
