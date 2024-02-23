@@ -11,7 +11,7 @@ use Twig\TwigFilter;
 
 class IsbnFormatterExtension extends AbstractExtension
 {
-    public function getFilters()
+    public function getFilters(): array
     {
         return [
             new TwigFilter('formatIsbn', [$this, 'formatIsbn']),
